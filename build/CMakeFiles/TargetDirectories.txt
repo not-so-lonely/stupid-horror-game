@@ -1,0 +1,3 @@
+/home/gnoiniy/Documents/code/game_sdl/build/CMakeFiles/MyRaylibGame.dir
+/home/gnoiniy/Documents/code/game_sdl/build/CMakeFiles/edit_cache.dir
+/home/gnoiniy/Documents/code/game_sdl/build/CMakeFiles/rebuild_cache.dir
