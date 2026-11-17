@@ -20,7 +20,9 @@ events:
     names:
       - "uname"
     candidate_directories:
-      - "/home/gnoiniy/.local/bin/"
+      - "/home/gnoevichok/.bun/bin/"
+      - "/home/gnoevichok/.cargo/bin/"
+      - "/home/gnoevichok/.local/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -29,16 +31,24 @@ events:
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/"
       - "/bin/"
     searched_directories:
-      - "/home/gnoiniy/.local/bin/uname"
+      - "/home/gnoevichok/.bun/bin/uname"
+      - "/home/gnoevichok/.cargo/bin/uname"
+      - "/home/gnoevichok/.local/bin/uname"
       - "/usr/local/sbin/uname"
       - "/usr/local/bin/uname"
     found: "/usr/bin/uname"
     search_context:
       ENV{PATH}:
-        - "/home/gnoiniy/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.cargo/bin"
+        - "/home/gnoevichok/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
@@ -47,14 +57,13 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
   -
     kind: "message-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:218 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:220 (message)"
       - "CMakeLists.txt:2 (project)"
     message: |
-      The system is: Linux - 7.3.1-1-cachyos - x86_64
+      The system is: Linux - 7.3.4-1-cachyos - x86_64
   -
     kind: "find-v1"
     backtrace:
@@ -76,7 +85,9 @@ events:
       - "make"
       - "smake"
     candidate_directories:
-      - "/home/gnoiniy/.local/bin/"
+      - "/home/gnoevichok/.bun/bin/"
+      - "/home/gnoevichok/.cargo/bin/"
+      - "/home/gnoevichok/.local/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -85,9 +96,10 @@ events:
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
-      - "/home/gnoiniy/.local/bin/gmake"
+      - "/home/gnoevichok/.bun/bin/gmake"
+      - "/home/gnoevichok/.cargo/bin/gmake"
+      - "/home/gnoevichok/.local/bin/gmake"
       - "/usr/local/sbin/gmake"
       - "/usr/local/bin/gmake"
       - "/usr/bin/gmake"
@@ -96,14 +108,22 @@ events:
       - "/usr/bin/site_perl/gmake"
       - "/usr/bin/vendor_perl/gmake"
       - "/usr/bin/core_perl/gmake"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/gmake"
-      - "/home/gnoiniy/.local/bin/make"
+      - "/home/gnoevichok/.bun/bin/make"
+      - "/home/gnoevichok/.cargo/bin/make"
+      - "/home/gnoevichok/.local/bin/make"
       - "/usr/local/sbin/make"
       - "/usr/local/bin/make"
     found: "/usr/bin/make"
     search_context:
       ENV{PATH}:
-        - "/home/gnoiniy/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.cargo/bin"
+        - "/home/gnoevichok/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
@@ -112,7 +132,6 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -138,8 +157,11 @@ events:
       - "xlc"
       - "icx"
       - "clang"
+      - "dpclang"
     candidate_directories:
-      - "/home/gnoiniy/.local/bin/"
+      - "/home/gnoevichok/.bun/bin/"
+      - "/home/gnoevichok/.cargo/bin/"
+      - "/home/gnoevichok/.local/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
@@ -148,15 +170,23 @@ events:
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
-      - "/home/gnoiniy/.local/bin/cc"
+      - "/home/gnoevichok/.bun/bin/cc"
+      - "/home/gnoevichok/.cargo/bin/cc"
+      - "/home/gnoevichok/.local/bin/cc"
       - "/usr/local/sbin/cc"
       - "/usr/local/bin/cc"
     found: "/usr/bin/cc"
     search_context:
       ENV{PATH}:
-        - "/home/gnoiniy/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.cargo/bin"
+        - "/home/gnoevichok/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
@@ -165,12 +195,11 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:541 (find_file)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:583 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
@@ -193,7 +222,14 @@ events:
     found: "/usr/share/cmake/Modules/CMakeCCompilerId.c.in"
     search_context:
       ENV{PATH}:
-        - "/home/gnoiniy/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.cargo/bin"
+        - "/home/gnoevichok/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
@@ -202,7 +238,6 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
   -
     kind: "message-v1"
     backtrace:
@@ -223,13 +258,13 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
       
       The C compiler identification is GNU, found in:
-        /home/gnoiniy/Documents/code/game_sdl/build/CMakeFiles/4.4.5/CompilerIdC/a.out
+        /home/gnoevichok/Documents/code/game_sdl/build4/CMakeFiles/4.5.0/CompilerIdC/a.out
       
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:249 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_AR"
@@ -246,7 +281,9 @@ events:
       - "ar"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/gnoiniy/.local/bin/"
+      - "/home/gnoevichok/.bun/bin/"
+      - "/home/gnoevichok/.cargo/bin/"
+      - "/home/gnoevichok/.local/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/var/lib/flatpak/exports/bin/"
@@ -254,11 +291,17 @@ events:
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/"
     found: "/usr/bin/ar"
     search_context:
       ENV{PATH}:
-        - "/home/gnoiniy/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.cargo/bin"
+        - "/home/gnoevichok/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
@@ -267,12 +310,11 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:249 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_RANLIB"
@@ -289,7 +331,9 @@ events:
       - "ranlib"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/gnoiniy/.local/bin/"
+      - "/home/gnoevichok/.bun/bin/"
+      - "/home/gnoevichok/.cargo/bin/"
+      - "/home/gnoevichok/.local/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/var/lib/flatpak/exports/bin/"
@@ -297,11 +341,17 @@ events:
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/"
     found: "/usr/bin/ranlib"
     search_context:
       ENV{PATH}:
-        - "/home/gnoiniy/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.cargo/bin"
+        - "/home/gnoevichok/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
@@ -310,12 +360,11 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:249 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_STRIP"
@@ -332,7 +381,9 @@ events:
       - "strip"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/gnoiniy/.local/bin/"
+      - "/home/gnoevichok/.bun/bin/"
+      - "/home/gnoevichok/.cargo/bin/"
+      - "/home/gnoevichok/.local/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/var/lib/flatpak/exports/bin/"
@@ -340,11 +391,17 @@ events:
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/"
     found: "/usr/bin/strip"
     search_context:
       ENV{PATH}:
-        - "/home/gnoiniy/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.cargo/bin"
+        - "/home/gnoevichok/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
@@ -353,12 +410,11 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:249 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_LINKER"
@@ -375,7 +431,9 @@ events:
       - "ld"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/gnoiniy/.local/bin/"
+      - "/home/gnoevichok/.bun/bin/"
+      - "/home/gnoevichok/.cargo/bin/"
+      - "/home/gnoevichok/.local/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/var/lib/flatpak/exports/bin/"
@@ -383,11 +441,17 @@ events:
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/"
     found: "/usr/bin/ld"
     search_context:
       ENV{PATH}:
-        - "/home/gnoiniy/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.cargo/bin"
+        - "/home/gnoevichok/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
@@ -396,12 +460,11 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:249 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_NM"
@@ -418,7 +481,9 @@ events:
       - "nm"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/gnoiniy/.local/bin/"
+      - "/home/gnoevichok/.bun/bin/"
+      - "/home/gnoevichok/.cargo/bin/"
+      - "/home/gnoevichok/.local/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/var/lib/flatpak/exports/bin/"
@@ -426,11 +491,17 @@ events:
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/"
     found: "/usr/bin/nm"
     search_context:
       ENV{PATH}:
-        - "/home/gnoiniy/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.cargo/bin"
+        - "/home/gnoevichok/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
@@ -439,12 +510,11 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:249 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_OBJDUMP"
@@ -461,7 +531,9 @@ events:
       - "objdump"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/gnoiniy/.local/bin/"
+      - "/home/gnoevichok/.bun/bin/"
+      - "/home/gnoevichok/.cargo/bin/"
+      - "/home/gnoevichok/.local/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/var/lib/flatpak/exports/bin/"
@@ -469,11 +541,17 @@ events:
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/"
     found: "/usr/bin/objdump"
     search_context:
       ENV{PATH}:
-        - "/home/gnoiniy/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.cargo/bin"
+        - "/home/gnoevichok/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
@@ -482,12 +560,11 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:249 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_OBJCOPY"
@@ -504,7 +581,9 @@ events:
       - "objcopy"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/gnoiniy/.local/bin/"
+      - "/home/gnoevichok/.bun/bin/"
+      - "/home/gnoevichok/.cargo/bin/"
+      - "/home/gnoevichok/.local/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/var/lib/flatpak/exports/bin/"
@@ -512,11 +591,17 @@ events:
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/"
     found: "/usr/bin/objcopy"
     search_context:
       ENV{PATH}:
-        - "/home/gnoiniy/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.cargo/bin"
+        - "/home/gnoevichok/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
@@ -525,12 +610,11 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:249 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_READELF"
@@ -547,7 +631,9 @@ events:
       - "readelf"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/gnoiniy/.local/bin/"
+      - "/home/gnoevichok/.bun/bin/"
+      - "/home/gnoevichok/.cargo/bin/"
+      - "/home/gnoevichok/.local/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/var/lib/flatpak/exports/bin/"
@@ -555,11 +641,17 @@ events:
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/"
     found: "/usr/bin/readelf"
     search_context:
       ENV{PATH}:
-        - "/home/gnoiniy/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.cargo/bin"
+        - "/home/gnoevichok/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
@@ -568,12 +660,11 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:249 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_DLLTOOL"
@@ -590,7 +681,9 @@ events:
       - "dlltool"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/gnoiniy/.local/bin/"
+      - "/home/gnoevichok/.bun/bin/"
+      - "/home/gnoevichok/.cargo/bin/"
+      - "/home/gnoevichok/.local/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/var/lib/flatpak/exports/bin/"
@@ -598,10 +691,11 @@ events:
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/usr/bin/dlltool"
-      - "/home/gnoiniy/.local/bin/dlltool"
+      - "/home/gnoevichok/.bun/bin/dlltool"
+      - "/home/gnoevichok/.cargo/bin/dlltool"
+      - "/home/gnoevichok/.local/bin/dlltool"
       - "/usr/local/sbin/dlltool"
       - "/usr/local/bin/dlltool"
       - "/var/lib/flatpak/exports/bin/dlltool"
@@ -609,11 +703,17 @@ events:
       - "/usr/bin/site_perl/dlltool"
       - "/usr/bin/vendor_perl/dlltool"
       - "/usr/bin/core_perl/dlltool"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/dlltool"
     found: false
     search_context:
       ENV{PATH}:
-        - "/home/gnoiniy/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.cargo/bin"
+        - "/home/gnoevichok/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
@@ -622,12 +722,11 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:249 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_ADDR2LINE"
@@ -644,7 +743,9 @@ events:
       - "addr2line"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/gnoiniy/.local/bin/"
+      - "/home/gnoevichok/.bun/bin/"
+      - "/home/gnoevichok/.cargo/bin/"
+      - "/home/gnoevichok/.local/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/var/lib/flatpak/exports/bin/"
@@ -652,11 +753,17 @@ events:
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/"
     found: "/usr/bin/addr2line"
     search_context:
       ENV{PATH}:
-        - "/home/gnoiniy/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.cargo/bin"
+        - "/home/gnoevichok/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
@@ -665,12 +772,11 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:249 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_TAPI"
@@ -687,7 +793,9 @@ events:
       - "tapi"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/gnoiniy/.local/bin/"
+      - "/home/gnoevichok/.bun/bin/"
+      - "/home/gnoevichok/.cargo/bin/"
+      - "/home/gnoevichok/.local/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/var/lib/flatpak/exports/bin/"
@@ -695,10 +803,11 @@ events:
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/usr/bin/tapi"
-      - "/home/gnoiniy/.local/bin/tapi"
+      - "/home/gnoevichok/.bun/bin/tapi"
+      - "/home/gnoevichok/.cargo/bin/tapi"
+      - "/home/gnoevichok/.local/bin/tapi"
       - "/usr/local/sbin/tapi"
       - "/usr/local/bin/tapi"
       - "/var/lib/flatpak/exports/bin/tapi"
@@ -706,11 +815,17 @@ events:
       - "/usr/bin/site_perl/tapi"
       - "/usr/bin/vendor_perl/tapi"
       - "/usr/bin/core_perl/tapi"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/tapi"
     found: false
     search_context:
       ENV{PATH}:
-        - "/home/gnoiniy/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.cargo/bin"
+        - "/home/gnoevichok/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
@@ -719,12 +834,11 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:202 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_C_COMPILER_AR"
@@ -744,7 +858,9 @@ events:
       - "gcc-ar"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/gnoiniy/.local/bin/"
+      - "/home/gnoevichok/.bun/bin/"
+      - "/home/gnoevichok/.cargo/bin/"
+      - "/home/gnoevichok/.local/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/var/lib/flatpak/exports/bin/"
@@ -752,42 +868,21 @@ events:
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/usr/bin/gcc-ar-16.2"
-      - "/home/gnoiniy/.local/bin/gcc-ar-16.2"
-      - "/usr/local/sbin/gcc-ar-16.2"
-      - "/usr/local/bin/gcc-ar-16.2"
-      - "/var/lib/flatpak/exports/bin/gcc-ar-16.2"
-      - "/usr/lib/jvm/default/bin/gcc-ar-16.2"
-      - "/usr/bin/site_perl/gcc-ar-16.2"
-      - "/usr/bin/vendor_perl/gcc-ar-16.2"
-      - "/usr/bin/core_perl/gcc-ar-16.2"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ar-16.2"
       - "/usr/bin/gcc-ar-16"
-      - "/home/gnoiniy/.local/bin/gcc-ar-16"
-      - "/usr/local/sbin/gcc-ar-16"
-      - "/usr/local/bin/gcc-ar-16"
-      - "/var/lib/flatpak/exports/bin/gcc-ar-16"
-      - "/usr/lib/jvm/default/bin/gcc-ar-16"
-      - "/usr/bin/site_perl/gcc-ar-16"
-      - "/usr/bin/vendor_perl/gcc-ar-16"
-      - "/usr/bin/core_perl/gcc-ar-16"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ar-16"
       - "/usr/bin/gcc-ar16"
-      - "/home/gnoiniy/.local/bin/gcc-ar16"
-      - "/usr/local/sbin/gcc-ar16"
-      - "/usr/local/bin/gcc-ar16"
-      - "/var/lib/flatpak/exports/bin/gcc-ar16"
-      - "/usr/lib/jvm/default/bin/gcc-ar16"
-      - "/usr/bin/site_perl/gcc-ar16"
-      - "/usr/bin/vendor_perl/gcc-ar16"
-      - "/usr/bin/core_perl/gcc-ar16"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ar16"
     found: "/usr/bin/gcc-ar"
     search_context:
       ENV{PATH}:
-        - "/home/gnoiniy/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.cargo/bin"
+        - "/home/gnoevichok/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
@@ -796,12 +891,11 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:33 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:202 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_C_COMPILER_RANLIB"
@@ -821,7 +915,9 @@ events:
       - "gcc-ranlib"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/gnoiniy/.local/bin/"
+      - "/home/gnoevichok/.bun/bin/"
+      - "/home/gnoevichok/.cargo/bin/"
+      - "/home/gnoevichok/.local/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/var/lib/flatpak/exports/bin/"
@@ -829,42 +925,21 @@ events:
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/usr/bin/gcc-ranlib-16.2"
-      - "/home/gnoiniy/.local/bin/gcc-ranlib-16.2"
-      - "/usr/local/sbin/gcc-ranlib-16.2"
-      - "/usr/local/bin/gcc-ranlib-16.2"
-      - "/var/lib/flatpak/exports/bin/gcc-ranlib-16.2"
-      - "/usr/lib/jvm/default/bin/gcc-ranlib-16.2"
-      - "/usr/bin/site_perl/gcc-ranlib-16.2"
-      - "/usr/bin/vendor_perl/gcc-ranlib-16.2"
-      - "/usr/bin/core_perl/gcc-ranlib-16.2"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ranlib-16.2"
       - "/usr/bin/gcc-ranlib-16"
-      - "/home/gnoiniy/.local/bin/gcc-ranlib-16"
-      - "/usr/local/sbin/gcc-ranlib-16"
-      - "/usr/local/bin/gcc-ranlib-16"
-      - "/var/lib/flatpak/exports/bin/gcc-ranlib-16"
-      - "/usr/lib/jvm/default/bin/gcc-ranlib-16"
-      - "/usr/bin/site_perl/gcc-ranlib-16"
-      - "/usr/bin/vendor_perl/gcc-ranlib-16"
-      - "/usr/bin/core_perl/gcc-ranlib-16"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ranlib-16"
       - "/usr/bin/gcc-ranlib16"
-      - "/home/gnoiniy/.local/bin/gcc-ranlib16"
-      - "/usr/local/sbin/gcc-ranlib16"
-      - "/usr/local/bin/gcc-ranlib16"
-      - "/var/lib/flatpak/exports/bin/gcc-ranlib16"
-      - "/usr/lib/jvm/default/bin/gcc-ranlib16"
-      - "/usr/bin/site_perl/gcc-ranlib16"
-      - "/usr/bin/vendor_perl/gcc-ranlib16"
-      - "/usr/bin/core_perl/gcc-ranlib16"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ranlib16"
     found: "/usr/bin/gcc-ranlib"
     search_context:
       ENV{PATH}:
-        - "/home/gnoiniy/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.cargo/bin"
+        - "/home/gnoevichok/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
@@ -873,7 +948,6 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -902,12 +976,20 @@ events:
       - "icpx"
       - "icx"
       - "clang++"
+      - "dpclang++"
     candidate_directories:
       - "/usr/bin/"
     found: "/usr/bin/c++"
     search_context:
       ENV{PATH}:
-        - "/home/gnoiniy/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.cargo/bin"
+        - "/home/gnoevichok/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
@@ -916,12 +998,11 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:541 (find_file)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:583 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
@@ -944,7 +1025,14 @@ events:
     found: "/usr/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       ENV{PATH}:
-        - "/home/gnoiniy/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.cargo/bin"
+        - "/home/gnoevichok/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
@@ -953,7 +1041,6 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
   -
     kind: "message-v1"
     backtrace:
@@ -974,13 +1061,13 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
       
       The CXX compiler identification is GNU, found in:
-        /home/gnoiniy/Documents/code/game_sdl/build/CMakeFiles/4.4.5/CompilerIdCXX/a.out
+        /home/gnoevichok/Documents/code/game_sdl/build4/CMakeFiles/4.5.0/CompilerIdCXX/a.out
       
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:208 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_AR"
@@ -1000,7 +1087,9 @@ events:
       - "gcc-ar"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/gnoiniy/.local/bin/"
+      - "/home/gnoevichok/.bun/bin/"
+      - "/home/gnoevichok/.cargo/bin/"
+      - "/home/gnoevichok/.local/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/var/lib/flatpak/exports/bin/"
@@ -1008,42 +1097,21 @@ events:
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/usr/bin/gcc-ar-16.2"
-      - "/home/gnoiniy/.local/bin/gcc-ar-16.2"
-      - "/usr/local/sbin/gcc-ar-16.2"
-      - "/usr/local/bin/gcc-ar-16.2"
-      - "/var/lib/flatpak/exports/bin/gcc-ar-16.2"
-      - "/usr/lib/jvm/default/bin/gcc-ar-16.2"
-      - "/usr/bin/site_perl/gcc-ar-16.2"
-      - "/usr/bin/vendor_perl/gcc-ar-16.2"
-      - "/usr/bin/core_perl/gcc-ar-16.2"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ar-16.2"
       - "/usr/bin/gcc-ar-16"
-      - "/home/gnoiniy/.local/bin/gcc-ar-16"
-      - "/usr/local/sbin/gcc-ar-16"
-      - "/usr/local/bin/gcc-ar-16"
-      - "/var/lib/flatpak/exports/bin/gcc-ar-16"
-      - "/usr/lib/jvm/default/bin/gcc-ar-16"
-      - "/usr/bin/site_perl/gcc-ar-16"
-      - "/usr/bin/vendor_perl/gcc-ar-16"
-      - "/usr/bin/core_perl/gcc-ar-16"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ar-16"
       - "/usr/bin/gcc-ar16"
-      - "/home/gnoiniy/.local/bin/gcc-ar16"
-      - "/usr/local/sbin/gcc-ar16"
-      - "/usr/local/bin/gcc-ar16"
-      - "/var/lib/flatpak/exports/bin/gcc-ar16"
-      - "/usr/lib/jvm/default/bin/gcc-ar16"
-      - "/usr/bin/site_perl/gcc-ar16"
-      - "/usr/bin/vendor_perl/gcc-ar16"
-      - "/usr/bin/core_perl/gcc-ar16"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ar16"
     found: "/usr/bin/gcc-ar"
     search_context:
       ENV{PATH}:
-        - "/home/gnoiniy/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.cargo/bin"
+        - "/home/gnoevichok/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
@@ -1052,12 +1120,11 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:33 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:208 (include)"
       - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_RANLIB"
@@ -1077,7 +1144,9 @@ events:
       - "gcc-ranlib"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/gnoiniy/.local/bin/"
+      - "/home/gnoevichok/.bun/bin/"
+      - "/home/gnoevichok/.cargo/bin/"
+      - "/home/gnoevichok/.local/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/var/lib/flatpak/exports/bin/"
@@ -1085,42 +1154,21 @@ events:
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/usr/bin/gcc-ranlib-16.2"
-      - "/home/gnoiniy/.local/bin/gcc-ranlib-16.2"
-      - "/usr/local/sbin/gcc-ranlib-16.2"
-      - "/usr/local/bin/gcc-ranlib-16.2"
-      - "/var/lib/flatpak/exports/bin/gcc-ranlib-16.2"
-      - "/usr/lib/jvm/default/bin/gcc-ranlib-16.2"
-      - "/usr/bin/site_perl/gcc-ranlib-16.2"
-      - "/usr/bin/vendor_perl/gcc-ranlib-16.2"
-      - "/usr/bin/core_perl/gcc-ranlib-16.2"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ranlib-16.2"
       - "/usr/bin/gcc-ranlib-16"
-      - "/home/gnoiniy/.local/bin/gcc-ranlib-16"
-      - "/usr/local/sbin/gcc-ranlib-16"
-      - "/usr/local/bin/gcc-ranlib-16"
-      - "/var/lib/flatpak/exports/bin/gcc-ranlib-16"
-      - "/usr/lib/jvm/default/bin/gcc-ranlib-16"
-      - "/usr/bin/site_perl/gcc-ranlib-16"
-      - "/usr/bin/vendor_perl/gcc-ranlib-16"
-      - "/usr/bin/core_perl/gcc-ranlib-16"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ranlib-16"
       - "/usr/bin/gcc-ranlib16"
-      - "/home/gnoiniy/.local/bin/gcc-ranlib16"
-      - "/usr/local/sbin/gcc-ranlib16"
-      - "/usr/local/bin/gcc-ranlib16"
-      - "/var/lib/flatpak/exports/bin/gcc-ranlib16"
-      - "/usr/lib/jvm/default/bin/gcc-ranlib16"
-      - "/usr/bin/site_perl/gcc-ranlib16"
-      - "/usr/bin/vendor_perl/gcc-ranlib16"
-      - "/usr/bin/core_perl/gcc-ranlib16"
-      - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ranlib16"
     found: "/usr/bin/gcc-ranlib"
     search_context:
       ENV{PATH}:
-        - "/home/gnoiniy/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.cargo/bin"
+        - "/home/gnoevichok/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
@@ -1129,7 +1177,6 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
   -
     kind: "try_compile-v1"
     backtrace:
@@ -1139,8 +1186,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/gnoiniy/Documents/code/game_sdl/build/CMakeFiles/CMakeScratch/TryCompile-7pET5S"
-      binary: "/home/gnoiniy/Documents/code/game_sdl/build/CMakeFiles/CMakeScratch/TryCompile-7pET5S"
+      source: "/home/gnoevichok/Documents/code/game_sdl/build4/CMakeFiles/CMakeScratch/TryCompile-fGR4If"
+      binary: "/home/gnoevichok/Documents/code/game_sdl/build4/CMakeFiles/CMakeScratch/TryCompile-fGR4If"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_C_FLAGS: ""
@@ -1150,13 +1197,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: false
       stdout: |
-        Change Dir: '/home/gnoiniy/Documents/code/game_sdl/build/CMakeFiles/CMakeScratch/TryCompile-7pET5S'
+        Change Dir: '/home/gnoevichok/Documents/code/game_sdl/build4/CMakeFiles/CMakeScratch/TryCompile-fGR4If'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_61642/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_61642.dir/build.make CMakeFiles/cmTC_61642.dir/build
-        make[1]: Entering directory '/home/gnoiniy/Documents/code/game_sdl/build/CMakeFiles/CMakeScratch/TryCompile-7pET5S'
-        Building C object CMakeFiles/cmTC_61642.dir/CMakeCCompilerABI.c.o
-        /usr/bin/cc   -v -o CMakeFiles/cmTC_61642.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d8e3f/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_d8e3f.dir/build.make CMakeFiles/cmTC_d8e3f.dir/build
+        make[1]: Entering directory '/home/gnoevichok/Documents/code/game_sdl/build4/CMakeFiles/CMakeScratch/TryCompile-fGR4If'
+        Building C object CMakeFiles/cmTC_d8e3f.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_d8e3f.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         Target: x86_64-pc-linux-gnu
@@ -1164,8 +1211,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 16.2.1 20260810 (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_61642.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_61642.dir/'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_61642.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccgWXRdB.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d8e3f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d8e3f.dir/'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d8e3f.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/cckCYWvJ.s
         GNU C23 (GCC) version 16.2.1 20260810 (x86_64-pc-linux-gnu)
         	compiled by GNU C version 16.2.1 20260810, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.4.1, isl version isl-0.28-GMP
         
@@ -1179,14 +1226,14 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: 21fae48896f9c4a226da158148b4a12e
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_61642.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_61642.dir/'
-         as -v --64 -o CMakeFiles/cmTC_61642.dir/CMakeCCompilerABI.c.o /tmp/ccgWXRdB.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d8e3f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d8e3f.dir/'
+         as -v --64 -o CMakeFiles/cmTC_d8e3f.dir/CMakeCCompilerABI.c.o /tmp/cckCYWvJ.s
         GNU assembler version 2.47 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.47
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_61642.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_61642.dir/CMakeCCompilerABI.c.'
-        Linking C executable cmTC_61642
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_61642.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d8e3f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d8e3f.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_d8e3f
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d8e3f.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper
@@ -1197,14 +1244,14 @@ events:
         gcc version 16.2.1 20260810 (GCC) 
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_61642' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_61642.'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3aTfG5.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_61642 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_61642.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d8e3f' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d8e3f.'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNeZ0A7.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_d8e3f /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_d8e3f.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
         collect2 version 16.2.1 20260810
-        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3aTfG5.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_61642 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_61642.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
+        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNeZ0A7.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_d8e3f /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_d8e3f.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
         GNU ld (GNU Binutils) 2.47
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_61642' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_61642.'
-        /usr/bin/cc  -v -Wl,-v CMakeFiles/cmTC_61642.dir/CMakeCCompilerABI.c.o -o cmTC_61642
-        make[1]: Leaving directory '/home/gnoiniy/Documents/code/game_sdl/build/CMakeFiles/CMakeScratch/TryCompile-7pET5S'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d8e3f' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d8e3f.'
+        /usr/bin/cc  -v -Wl,-v CMakeFiles/cmTC_d8e3f.dir/CMakeCCompilerABI.c.o -o cmTC_d8e3f
+        make[1]: Leaving directory '/home/gnoevichok/Documents/code/game_sdl/build4/CMakeFiles/CMakeScratch/TryCompile-fGR4If'
         
       exitCode: 0
   -
@@ -1235,15 +1282,15 @@ events:
       - "CMakeLists.txt:2 (project)"
     message: |
       Parsed C implicit link information:
-        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)(\\.exe)?"?( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild))("|,| |$)]
-        ignore line: [Change Dir: '/home/gnoiniy/Documents/code/game_sdl/build/CMakeFiles/CMakeScratch/TryCompile-7pET5S']
+        ignore line: [Change Dir: '/home/gnoevichok/Documents/code/game_sdl/build4/CMakeFiles/CMakeScratch/TryCompile-fGR4If']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_61642/fast]
-        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_61642.dir/build.make CMakeFiles/cmTC_61642.dir/build]
-        ignore line: [make[1]: Entering directory '/home/gnoiniy/Documents/code/game_sdl/build/CMakeFiles/CMakeScratch/TryCompile-7pET5S']
-        ignore line: [Building C object CMakeFiles/cmTC_61642.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_61642.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d8e3f/fast]
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_d8e3f.dir/build.make CMakeFiles/cmTC_d8e3f.dir/build]
+        ignore line: [make[1]: Entering directory '/home/gnoevichok/Documents/code/game_sdl/build4/CMakeFiles/CMakeScratch/TryCompile-fGR4If']
+        ignore line: [Building C object CMakeFiles/cmTC_d8e3f.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_d8e3f.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [Target: x86_64-pc-linux-gnu]
@@ -1251,8 +1298,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 16.2.1 20260810 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_61642.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_61642.dir/']
-        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_61642.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccgWXRdB.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d8e3f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d8e3f.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d8e3f.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/cckCYWvJ.s]
         ignore line: [GNU C23 (GCC) version 16.2.1 20260810 (x86_64-pc-linux-gnu)]
         ignore line: [	compiled by GNU C version 16.2.1 20260810  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.4.1  isl version isl-0.28-GMP]
         ignore line: []
@@ -1266,14 +1313,14 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 21fae48896f9c4a226da158148b4a12e]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_61642.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_61642.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_61642.dir/CMakeCCompilerABI.c.o /tmp/ccgWXRdB.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d8e3f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d8e3f.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_d8e3f.dir/CMakeCCompilerABI.c.o /tmp/cckCYWvJ.s]
         ignore line: [GNU assembler version 2.47 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.47]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_61642.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_61642.dir/CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_61642]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_61642.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d8e3f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d8e3f.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_d8e3f]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d8e3f.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper]
@@ -1284,13 +1331,13 @@ events:
         ignore line: [gcc version 16.2.1 20260810 (GCC) ]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_61642' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_61642.']
-        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3aTfG5.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_61642 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_61642.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d8e3f' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d8e3f.']
+        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNeZ0A7.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_d8e3f /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_d8e3f.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2] ==> ignore
-          arg [-plugin] ==> ignore
-          arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so] ==> ignore
+          arg [-plugin] ==> ignore, skip following value
+          arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so] ==> skip value of -plugin
           arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/cc3aTfG5.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccNeZ0A7.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s_asneeded] ==> ignore
           arg [-plugin-opt=-pass-through=-latomic_asneeded] ==> ignore
@@ -1302,11 +1349,11 @@ events:
           arg [--hash-style=gnu] ==> ignore
           arg [-m] ==> ignore
           arg [elf_x86_64] ==> ignore
-          arg [-dynamic-linker] ==> ignore
-          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-dynamic-linker] ==> ignore, skip following value
+          arg [/lib64/ld-linux-x86-64.so.2] ==> skip value of -dynamic-linker
           arg [-pie] ==> ignore
-          arg [-o] ==> ignore
-          arg [cmTC_61642] ==> ignore
+          arg [-o] ==> ignore, skip following value
+          arg [cmTC_d8e3f] ==> skip value of -o
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o]
@@ -1318,7 +1365,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_61642.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_d8e3f.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [-lgcc_s_asneeded] ==> lib [gcc_s_asneeded]
           arg [-latomic_asneeded] ==> lib [atomic_asneeded]
@@ -1328,10 +1375,10 @@ events:
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
         ignore line: [collect2 version 16.2.1 20260810]
-        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3aTfG5.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_61642 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_61642.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker [/usr/bin/ld]
-        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3aTfG5.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_61642 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_61642.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker architecture flags [-m;elf]
-        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3aTfG5.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_61642 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_61642.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
-        linker tool for 'C': /usr/bin/ld -m;elf
+        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNeZ0A7.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_d8e3f /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_d8e3f.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker [/usr/bin/ld]
+        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNeZ0A7.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_d8e3f /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_d8e3f.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker architecture flags [-m;elf_x86_64]
+        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNeZ0A7.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_d8e3f /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_d8e3f.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
+        linker tool for 'C': /usr/bin/ld -m;elf_x86_64
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o] ==> [/usr/lib/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o] ==> [/usr/lib/crti.o]
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> [/usr/lib/crtn.o]
@@ -1367,8 +1414,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/gnoiniy/Documents/code/game_sdl/build/CMakeFiles/CMakeScratch/TryCompile-ZGiGbf"
-      binary: "/home/gnoiniy/Documents/code/game_sdl/build/CMakeFiles/CMakeScratch/TryCompile-ZGiGbf"
+      source: "/home/gnoevichok/Documents/code/game_sdl/build4/CMakeFiles/CMakeScratch/TryCompile-ezHAg5"
+      binary: "/home/gnoevichok/Documents/code/game_sdl/build4/CMakeFiles/CMakeScratch/TryCompile-ezHAg5"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1379,13 +1426,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: false
       stdout: |
-        Change Dir: '/home/gnoiniy/Documents/code/game_sdl/build/CMakeFiles/CMakeScratch/TryCompile-ZGiGbf'
+        Change Dir: '/home/gnoevichok/Documents/code/game_sdl/build4/CMakeFiles/CMakeScratch/TryCompile-ezHAg5'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_91555/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_91555.dir/build.make CMakeFiles/cmTC_91555.dir/build
-        make[1]: Entering directory '/home/gnoiniy/Documents/code/game_sdl/build/CMakeFiles/CMakeScratch/TryCompile-ZGiGbf'
-        Building CXX object CMakeFiles/cmTC_91555.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -v -o CMakeFiles/cmTC_91555.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_26a8c/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_26a8c.dir/build.make CMakeFiles/cmTC_26a8c.dir/build
+        make[1]: Entering directory '/home/gnoevichok/Documents/code/game_sdl/build4/CMakeFiles/CMakeScratch/TryCompile-ezHAg5'
+        Building CXX object CMakeFiles/cmTC_26a8c.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_26a8c.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         Target: x86_64-pc-linux-gnu
@@ -1393,8 +1440,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 16.2.1 20260810 (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_91555.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_91555.dir/'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_91555.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccdIy1rM.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_26a8c.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_26a8c.dir/'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_26a8c.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccGfHyFu.s
         GNU C++20 (GCC) version 16.2.1 20260810 (x86_64-pc-linux-gnu)
         	compiled by GNU C version 16.2.1 20260810, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.4.1, isl version isl-0.28-GMP
         
@@ -1411,14 +1458,14 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: 48ed26afbfd8a1151cb01c1770d6f643
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_91555.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_91555.dir/'
-         as -v --64 -o CMakeFiles/cmTC_91555.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccdIy1rM.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_26a8c.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_26a8c.dir/'
+         as -v --64 -o CMakeFiles/cmTC_26a8c.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccGfHyFu.s
         GNU assembler version 2.47 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.47
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_91555.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_91555.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_91555
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_91555.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_26a8c.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_26a8c.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_26a8c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_26a8c.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper
@@ -1429,14 +1476,14 @@ events:
         gcc version 16.2.1 20260810 (GCC) 
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_91555' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_91555.'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsY8rr9.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_91555 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_91555.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_26a8c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_26a8c.'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccHNW4NB.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_26a8c /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_26a8c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
         collect2 version 16.2.1 20260810
-        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsY8rr9.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_91555 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_91555.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
+        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccHNW4NB.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_26a8c /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_26a8c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
         GNU ld (GNU Binutils) 2.47
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_91555' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_91555.'
-        /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_91555.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_91555
-        make[1]: Leaving directory '/home/gnoiniy/Documents/code/game_sdl/build/CMakeFiles/CMakeScratch/TryCompile-ZGiGbf'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_26a8c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_26a8c.'
+        /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_26a8c.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_26a8c
+        make[1]: Leaving directory '/home/gnoevichok/Documents/code/game_sdl/build4/CMakeFiles/CMakeScratch/TryCompile-ezHAg5'
         
       exitCode: 0
   -
@@ -1473,15 +1520,15 @@ events:
       - "CMakeLists.txt:2 (project)"
     message: |
       Parsed CXX implicit link information:
-        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)(\\.exe)?"?( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild))("|,| |$)]
-        ignore line: [Change Dir: '/home/gnoiniy/Documents/code/game_sdl/build/CMakeFiles/CMakeScratch/TryCompile-ZGiGbf']
+        ignore line: [Change Dir: '/home/gnoevichok/Documents/code/game_sdl/build4/CMakeFiles/CMakeScratch/TryCompile-ezHAg5']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_91555/fast]
-        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_91555.dir/build.make CMakeFiles/cmTC_91555.dir/build]
-        ignore line: [make[1]: Entering directory '/home/gnoiniy/Documents/code/game_sdl/build/CMakeFiles/CMakeScratch/TryCompile-ZGiGbf']
-        ignore line: [Building CXX object CMakeFiles/cmTC_91555.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_91555.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_26a8c/fast]
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_26a8c.dir/build.make CMakeFiles/cmTC_26a8c.dir/build]
+        ignore line: [make[1]: Entering directory '/home/gnoevichok/Documents/code/game_sdl/build4/CMakeFiles/CMakeScratch/TryCompile-ezHAg5']
+        ignore line: [Building CXX object CMakeFiles/cmTC_26a8c.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_26a8c.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [Target: x86_64-pc-linux-gnu]
@@ -1489,8 +1536,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 16.2.1 20260810 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_91555.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_91555.dir/']
-        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_91555.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccdIy1rM.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_26a8c.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_26a8c.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_26a8c.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccGfHyFu.s]
         ignore line: [GNU C++20 (GCC) version 16.2.1 20260810 (x86_64-pc-linux-gnu)]
         ignore line: [	compiled by GNU C version 16.2.1 20260810  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.4.1  isl version isl-0.28-GMP]
         ignore line: []
@@ -1507,14 +1554,14 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 48ed26afbfd8a1151cb01c1770d6f643]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_91555.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_91555.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_91555.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccdIy1rM.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_26a8c.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_26a8c.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_26a8c.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccGfHyFu.s]
         ignore line: [GNU assembler version 2.47 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.47]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_91555.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_91555.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_91555]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_91555.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_26a8c.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_26a8c.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_26a8c]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_26a8c.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper]
@@ -1525,13 +1572,13 @@ events:
         ignore line: [gcc version 16.2.1 20260810 (GCC) ]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_91555' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_91555.']
-        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsY8rr9.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_91555 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_91555.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_26a8c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_26a8c.']
+        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccHNW4NB.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_26a8c /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_26a8c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2] ==> ignore
-          arg [-plugin] ==> ignore
-          arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so] ==> ignore
+          arg [-plugin] ==> ignore, skip following value
+          arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so] ==> skip value of -plugin
           arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccsY8rr9.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccHNW4NB.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-latomic_asneeded] ==> ignore
@@ -1543,11 +1590,11 @@ events:
           arg [--hash-style=gnu] ==> ignore
           arg [-m] ==> ignore
           arg [elf_x86_64] ==> ignore
-          arg [-dynamic-linker] ==> ignore
-          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-dynamic-linker] ==> ignore, skip following value
+          arg [/lib64/ld-linux-x86-64.so.2] ==> skip value of -dynamic-linker
           arg [-pie] ==> ignore
-          arg [-o] ==> ignore
-          arg [cmTC_91555] ==> ignore
+          arg [-o] ==> ignore, skip following value
+          arg [cmTC_26a8c] ==> skip value of -o
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o]
@@ -1559,7 +1606,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_91555.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_26a8c.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -1571,10 +1618,10 @@ events:
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
         ignore line: [collect2 version 16.2.1 20260810]
-        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsY8rr9.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_91555 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_91555.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker [/usr/bin/ld]
-        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsY8rr9.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_91555 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_91555.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker architecture flags [-m;elf]
-        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsY8rr9.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_91555 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_91555.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
-        linker tool for 'CXX': /usr/bin/ld -m;elf
+        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccHNW4NB.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_26a8c /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_26a8c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker [/usr/bin/ld]
+        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccHNW4NB.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_26a8c /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_26a8c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker architecture flags [-m;elf_x86_64]
+        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccHNW4NB.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_26a8c /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_26a8c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
+        linker tool for 'CXX': /usr/bin/ld -m;elf_x86_64
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o] ==> [/usr/lib/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o] ==> [/usr/lib/crti.o]
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> [/usr/lib/crtn.o]
@@ -1640,35 +1687,67 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/home/gnoiniy/Documents/code/game_sdl/build/CMakeFiles/pkgRedirects/raylibConfig.cmake"
+        path: "/home/gnoevichok/Documents/code/game_sdl/build4/CMakeFiles/pkgRedirects/raylibConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gnoiniy/Documents/code/game_sdl/build/CMakeFiles/pkgRedirects/raylib-config.cmake"
+        path: "/home/gnoevichok/Documents/code/game_sdl/build4/CMakeFiles/pkgRedirects/raylib-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gnoiniy/Documents/code/game_sdl/build/CMakeFiles/pkgRedirects/lib/cps/raylib.cps"
+        path: "/home/gnoevichok/Documents/code/game_sdl/build4/CMakeFiles/pkgRedirects/lib/cps/raylib.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gnoiniy/Documents/code/game_sdl/build/CMakeFiles/pkgRedirects/share/cps/raylib.cps"
+        path: "/home/gnoevichok/Documents/code/game_sdl/build4/CMakeFiles/pkgRedirects/share/cps/raylib.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gnoiniy/.local/raylibConfig.cmake"
+        path: "/home/gnoevichok/.bun/raylibConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gnoiniy/.local/raylib-config.cmake"
+        path: "/home/gnoevichok/.bun/raylib-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gnoiniy/.local/lib/cps/raylib.cps"
+        path: "/home/gnoevichok/.bun/lib/cps/raylib.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gnoiniy/.local/share/cps/raylib.cps"
+        path: "/home/gnoevichok/.bun/share/cps/raylib.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/gnoevichok/.cargo/raylibConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/gnoevichok/.cargo/raylib-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/gnoevichok/.cargo/lib/cps/raylib.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/gnoevichok/.cargo/share/cps/raylib.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/gnoevichok/.local/raylibConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/gnoevichok/.local/raylib-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/gnoevichok/.local/lib/cps/raylib.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/gnoevichok/.local/share/cps/raylib.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -1713,7 +1792,14 @@ events:
       version: "6.2.0"
     search_context:
       ENV{PATH}:
-        - "/home/gnoiniy/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.cargo/bin"
+        - "/home/gnoevichok/.local/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
+        - "/home/gnoevichok/.bun/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
@@ -1722,7 +1808,6 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/gnoiniy/.vscode-oss/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/usr/local"

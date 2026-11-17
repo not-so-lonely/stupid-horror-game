@@ -1,5 +1,5 @@
 CMakeFiles/MyRaylibGame.dir/main.cpp.o: \
- /home/gnoiniy/Documents/code/game_sdl/main.cpp \
+ /home/gnoevichok/Documents/code/game_sdl/main.cpp \
  /usr/include/stdc-predef.h /usr/include/raylib.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stdarg.h \
  /usr/include/raymath.h /usr/include/c++/16/math.h \

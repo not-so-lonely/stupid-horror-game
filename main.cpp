@@ -16,8 +16,40 @@ typedef struct EnvItem {
     Rectangle rect;
     int blocking;
     Color color;
+
+    bool isMoving;
+    Vector2 startPos;
+    Vector2 velocity;
+    float moveRange;
+    int moveDirection;
 } EnvItem;
 
+void UpdateMovingPlatforms(EnvItem *envItems, int count, float delta) {
+    for (int i = 0; i < count; i++) {
+        EnvItem *item = &envItems[i];
+        if (!item->isMoving) continue;
+
+        item->rect.x += item->velocity.x * delta;
+        item->rect.y += item->velocity.y * delta;
+
+        float dist = Vector2Distance(
+            (Vector2){ item->rect.x, item->rect.y }, item->startPos);
+
+        if (dist >= item->moveRange) {
+            // Clamp to the limit in the direction we were moving
+            if (item->moveDirection > 0) {
+                item->rect.x = item->startPos.x + item->moveRange;
+            } else {
+                item->rect.x = item->startPos.x - item->moveRange;
+            }
+            // (do the same for y if you allow vertical platforms)
+
+            item->moveDirection *= -1;
+            item->velocity.x *= -1;
+            item->velocity.y *= -1; // only if you allow vertical movement
+        }
+    }
+}
 void UpdatePlayer(Player *player, EnvItem *envItems, int envItemsLength, float delta) {
     if (IsKeyDown(KEY_LEFT)) player->position.x -= PLAYER_HOR_SPD*delta;
     if (IsKeyDown(KEY_RIGHT)) player->position.x += PLAYER_HOR_SPD*delta;
@@ -69,39 +101,42 @@ int main() {
     Vector2 irisLeftPosition = { GetScreenWidth()/2.0f - 100.0f, GetScreenHeight()/2.0f - 100.0f };
     Vector2 irisRightPosition = { GetScreenWidth()/2.0f + 100.0f, GetScreenHeight()/2.0f - 100.0f };
     float irisRadius = 24;
-
+    Vector2 jgg = { 650, 300};
     float angle = 0.0f;
     float dx = 0.0f, dy = 0.0f, dxx = 0.0f, dyy = 0.0f;
 
 
-
     Player player = { 0 };
-    player.position = (Vector2){ 400, 200 };
+    player.position = (Vector2){ 3500, 350 };
     player.speed = 0;
     player.canJump = false;
     EnvItem envItems[] = {
-        {{ 0, 0, 1000, 400 }, 0, DARKGRAY },
-        {{ 0, 400, 1000, 200 }, 1, GRAY }, //bottom platf
-       // {{ 300, 200, 400, 10 }, 1, GRAY }, //top platf
-       // {{ 250, 300, 100, 10 }, 1, GRAY },
-       // {{ 650, 300, 100, 10 }, 1, GRAY },
-        {{ GetScreenWidth()/2.0f - 200.0f, GetScreenHeight()/2.0f - 100.0f, 200, 200}, 0, BLACK}, //door
-        {{ 0, -500, 1000, 500}, 1, GRAY }
+        //watch room
+        {{ 0, 0, 1000, 400 }, 0, DARKGRAY, false},
+        {{ 0, 400, 2000, 200 }, 1, GRAY, false }, //bottom platf
+        {{ jgg.x, jgg.y, 100, 10 }, 1, GRAY, true, jgg, { 200, 0 }, 500, 1 },
+        {{ GetScreenWidth()/2.0f - 200.0f, GetScreenHeight()/2.0f - 100.0f, 200, 200}, 0, BLACK, false }, //door
+        {{ 0, -500, 1000, 500}, 1, GRAY, false },
+        //main room
+        {{3000,0,1000,400},0,DARKGRAY,false},
+        {{3000,400,1000,400},1,GRAY,false},
+        {{3000,-300,1000,300},1,GRAY,false}
     };
-
+    //envItems[2]
     int envItemsLength = sizeof(envItems)/sizeof(envItems[0]);
 
     Camera2D camera = { 0 };
     camera.target = (Vector2){ player.position.x + 20.0f, player.position.y + 20.0f };
     camera.offset = (Vector2){ GetRenderWidth()/2.0f, GetRenderHeight()/2.0f};
     camera.rotation = 0.0f;
-    camera.zoom = 1.0f;
+    camera.zoom = 0.5f;
 
 
     SetTargetFPS(60);
 
     while (!WindowShouldClose()) {
         float deltaTime = GetFrameTime();
+        UpdateMovingPlatforms(envItems,envItemsLength, deltaTime);
         UpdatePlayer(&player, envItems, envItemsLength, deltaTime);
 
         camera.target = (Vector2){ player.position.x + 20.0f, player.position.y + 20.0f };
@@ -149,8 +184,9 @@ int main() {
             
             BeginMode2D(camera);
 
-                for (int i = 0; i < envItemsLength; i++) DrawRectangleRec(envItems[i].rect, envItems[i].color);
-
+                for (int i = 0; i < envItemsLength; i++)
+                DrawRectangleRec(envItems[i].rect, envItems[i].color);
+                //DrawRectangle(pos2,300,100,10,GRAY);                                               
 
                 DrawCircleV(scleraLeftPosition, scleraRadius, LIGHTGRAY);
                 DrawCircleV(irisLeftPosition, irisRadius, BROWN);
