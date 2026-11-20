@@ -1,11 +1,13 @@
 #include "raylib.h"
 #include "raymath.h"
-#include <math.h>     
+#include "math.h"   
 
 #define G 400
 #define PLAYER_JUMP_SPD 350.0f
 #define PLAYER_HOR_SPD 200.0f
 
+
+//classes
 typedef struct Player {
     Vector2 position;
     float speed;
@@ -26,7 +28,10 @@ typedef struct EnvItem {
     bool isDanger;
 } EnvItem;
 
+
+//functions
 void UpdateMovingPlatforms(EnvItem *envItems, int count, float delta) {
+    //TODO: MOVING PLAYER WITH THE PLATFORM
     for (int i = 0; i < count; i++) {
         EnvItem *item = &envItems[i];
         if (!item->isMoving) continue;
@@ -52,6 +57,8 @@ void UpdateMovingPlatforms(EnvItem *envItems, int count, float delta) {
         }
     }
 }
+
+
 
 void UpdatePlayer(Player *player, EnvItem *envItems, int envItemsLength, float delta) {
     if (IsKeyDown(KEY_LEFT)) player->position.x -= PLAYER_HOR_SPD*delta;
@@ -89,31 +96,26 @@ void UpdatePlayer(Player *player, EnvItem *envItems, int envItemsLength, float d
         player->canJump = false;
     }
     else player->canJump = true;
-    /*
-    bool hitDanger = false;
-    for (int i = 0; i < envItemsLength; i++)
-    {
-        EnvItem *ei = envItems + i;
-        Vector2 *p = &(player->position);
-        if (ei->isDanger && ei->rect.x <= p->x && ei->rect.x + ei->rect.width >= p->x && ei->rect.y >= p->y)
-        {
-            hitDanger = true;
-            p->x -= 200;
-            p->y -= 50;
-            break;
-        }
-    }
-        */
+ 
 }
 
-//######################################################################
 
+
+//main
 int main() {
+    //initialazing windows W and H and window itself
     const int sW = 800;
     const int sH = 600;
 
     InitWindow(sW, sH, "example");
 
+    //section for ALL the textures AND images
+    Image image = LoadImage("brickswide.png");
+    Texture2D wall = LoadTextureFromImage(image);
+    UnloadImage(image);
+
+
+    //moving eyes init from the ending room !!DONT TOUCH!!
     Vector2 scleraLeftPosition = { GetScreenWidth()/2.0f - 300.0f, GetScreenHeight()/2.0f - 100.0f };
     Vector2 scleraRightPosition = { GetScreenWidth()/2.0f + 100.0f, GetScreenHeight()/2.0f - 100.0f };
     float scleraRadius = 80;
@@ -121,54 +123,78 @@ int main() {
     Vector2 irisLeftPosition = { GetScreenWidth()/2.0f - 100.0f, GetScreenHeight()/2.0f - 100.0f };
     Vector2 irisRightPosition = { GetScreenWidth()/2.0f + 100.0f, GetScreenHeight()/2.0f - 100.0f };
     float irisRadius = 24;
-    Vector2 jgg = { 650, 300};
     float angle = 0.0f;
     float dx = 0.0f, dy = 0.0f, dxx = 0.0f, dyy = 0.0f;
+    //*probably need to be fixed+hardcoded for not to go to random coords +maybe some textures
 
 
+    //PLAYER AND ENVITEMS (PLATFORMS) 
     Player player = { 0 };
     player.position = (Vector2){ 3500, 350 };
     player.speed = 0;
     player.canJump = false;
     player.safepos = (Vector2){ player.position.x, 350};
     EnvItem envItems[] = {
-        //watch room
+        //ending room
         {{ 0, 0, 1000, 400 }, 0, DARKGRAY, false, false},
         {{ 0, 400, 2000, 200 }, 1, GRAY, false, false  }, //bottom platf
-        {{ jgg.x, jgg.y, 100, 10 }, 1, GRAY, true, jgg, { 200, 0 }, 500, 1, false },
-        {{ GetScreenWidth()/2.0f - 200.0f, GetScreenHeight()/2.0f - 100.0f, 200, 200}, 0, BLACK, false, false }, //door
+        //need rework - {{ GetScreenWidth()/2.0f - 200.0f, GetScreenHeight()/2.0f - 100.0f, 200, 200}, 0, BLACK, false, false }, //door
         {{ 0, -500, 1000, 500}, 1, GRAY, false, false },
+
+
         //main room
-        {{3000,0,2000,400},0,DARKGRAY,false, false},
-        {{3000,400,2000,400},1,GRAY,false, false},
-        {{3000,-300,2000,300},1,GRAY,false, false},
-        //danger
-        {{1500, 300, 100, 100}, 0, GOLD, false, true},
+        {{3000,0,2000,400},0,DARKGRAY,false, false}, //bg
+        {{3000,400,2000,400},1,GRAY,false, false}, //the floor 
+        {{3000,-300,2000,300},1,GRAY,false, false}, //roof
+
+
         //switch room
         {{7000,0,1000,700}, 0, BLUE, false, false},
-       {{7000,-300,1000,400}, 1, DARKGRAY, false, false},
-       {{7000,400,1000,400}, 1, DARKGRAY, false, false},
+        {{7000,-300,1000,400}, 1, DARKGRAY, false, false},
+        {{7000,400,1000,400}, 1, DARKGRAY, false, false},
+
+
+        //like 3 more rooms to be init-ed
+
+        //moving objects
+        {{ 650, 300, 100, 10 }, 1, GRAY, true, { 650 , 300 }, { 200, 0 }, 500, 1, false },
+
+
+
+        //dangerous objects
+        {{1500, 300, 100, 100}, 0, GOLD, false, true},
+        
         
     
     };
-    //envItems[2]
     int envItemsLength = sizeof(envItems)/sizeof(envItems[0]);
 
+
+    //CAMERA - !!DONT TOUCH!!
     Camera2D camera = { 0 };
     camera.target = (Vector2){ player.position.x + 20.0f, player.position.y + 20.0f };
     camera.offset = (Vector2){ GetRenderWidth()/2.0f, GetRenderHeight()/2.0f};
     camera.rotation = 0.0f;
-    camera.zoom = 1.0f;
+    camera.zoom = 0.7f;
 
+
+    //game target fps
     SetTargetFPS(60);
 
+
+    //MAIN GAME LOOP
     while (!WindowShouldClose()) {
+        //making player state update
         float deltaTime = GetFrameTime();
         UpdateMovingPlatforms(envItems,envItemsLength, deltaTime);
         UpdatePlayer(&player, envItems, envItemsLength, deltaTime);
 
-        camera.target = (Vector2){ player.position.x + 20.0f, player.position.y + 20.0f };
 
+        //binding camera to player
+        camera.target = (Vector2){ player.position.x + 20.0f, player.position.y + 20.0f };
+        
+    
+        //TRACKING EYES !!DONT TOUCH AT ALL!!
         irisLeftPosition = player.position;
         irisRightPosition = player.position;
 
@@ -202,6 +228,9 @@ int main() {
             irisRightPosition.y = scleraRightPosition.y + dyy;
         }
 
+
+        //Room-transition (maybe rework)
+        //from tracking eyes room to main room and vice versa
         if (player.position.x > 1950 && player.position.x < 2000 ) {
             player.position.x = 3100;
             player.safepos.x = 3100;
@@ -210,6 +239,7 @@ int main() {
             player.position.x = 1900;
             player.safepos.x = 1900;
         }
+        //from main room to choosing room and vice versa
         if (player.position.x > 4950 && player.position.x < 5000) {
             player.position.x = 7100;
             player.safepos.x = 7100;
@@ -218,18 +248,22 @@ int main() {
             player.position.x = 4900;
             player.safepos.x = 4900;
         }
+        //like 3 more transitions
+        
 
+        //START OF DRAWING OF GAME 
         BeginDrawing();
-
-            ClearBackground(LIGHTGRAY);
-
+            //color of background:
+            ClearBackground(LIGHTGRAY); 
             
+
+            //starting camera
             BeginMode2D(camera);
-
+                //drawing all the envItems platforms
                 for (int i = 0; i < envItemsLength; i++)
-                DrawRectangleRec(envItems[i].rect, envItems[i].color);
-                //DrawRectangle(pos2,300,100,10,GRAY);                                               
-
+                DrawRectangleRec(envItems[i].rect, envItems[i].color);                                           
+                
+                //TRACKING EYES !!DONT TOUCH!!
                 DrawCircleV(scleraLeftPosition, scleraRadius, LIGHTGRAY);
                 DrawCircleV(irisLeftPosition, irisRadius, BROWN);
                 DrawCircleV(irisLeftPosition, 10, BLACK);
@@ -239,29 +273,38 @@ int main() {
                 DrawCircleV(irisRightPosition, 10, BLACK);
 
 
+                //Drawing all the textures
+                DrawTexturePro(wall, { 0.0f, 0.0f, (float)wall.width, (float)wall.height}, {envItems[4].rect.x, envItems[4].rect.y, envItems[4].rect.width, envItems[4].rect.height}, { 0.0f, 0.0f }, 0.0f, WHITE);
+  
+
+                //creating and drawing the player box (just to be visible, prob will need a texture)
                 Rectangle playerRect = { player.position.x - 20, player.position.y - 40, 40.0f, 40.0f };
-
                 DrawRectangleRec(playerRect, RED);
-
                 DrawCircleV(player.position, 5.0f, GOLD);
+                
 
-                if (CheckCollisionRecs(playerRect, envItems[8].rect))
+                //DEATH - tp to safepos when collision with [exact object] (prob need a rework to connect to envItems struct, not hardcoded)
+                if (CheckCollisionRecs(playerRect, envItems[10].rect))
                 {
-                    DrawText("SEX",1300, 200,36,BLACK);
                     player.position = player.safepos;
                 }
+
+
             EndMode2D();
 
-
             
-
-
-        EndDrawing();
+        EndDrawing();  
     }
 
 
+    //necessary - UNLOAD ALL THE TEXTURES
+    UnloadTexture(wall);
+    //*probably can make an list of all textures as class like as envItems to just unload all
 
+
+    //closing window !!DONT TOUCH!!
     CloseWindow();
 
     return 0;
 }
+
