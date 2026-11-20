@@ -53,7 +53,7 @@ void UpdateMovingPlatforms(EnvItem *envItems, int count, float delta) {
 
             item->moveDirection *= -1;
             item->velocity.x *= -1;
-            item->velocity.y *= -1; // only if you allow vertical movement
+            //item->velocity.y *= -1; // only if you allow vertical movement
         }
     }
 }
@@ -115,6 +115,11 @@ int main() {
     UnloadImage(image);
 
 
+    //all the parametres section
+    const int pUS = 64; //platform universal size measure
+    const int pDW = 1024;
+    const int pDH = 256;
+
     //moving eyes init from the ending room !!DONT TOUCH!!
     Vector2 scleraLeftPosition = { GetScreenWidth()/2.0f - 300.0f, GetScreenHeight()/2.0f - 100.0f };
     Vector2 scleraRightPosition = { GetScreenWidth()/2.0f + 100.0f, GetScreenHeight()/2.0f - 100.0f };
@@ -130,39 +135,56 @@ int main() {
 
     //PLAYER AND ENVITEMS (PLATFORMS) 
     Player player = { 0 };
-    player.position = (Vector2){ 3500, 350 };
+    player.position = (Vector2){ pDW*2+pDW/2, pDH+128-32 };
     player.speed = 0;
     player.canJump = false;
-    player.safepos = (Vector2){ player.position.x, 350};
+    player.safepos = (Vector2){ player.position.x, 352};
+    //TODO: Scale all platform widths and heights to 64*n to apply textures accurately
     EnvItem envItems[] = {
         //ending room
-        {{ 0, 0, 1000, 400 }, 0, DARKGRAY, false, false},
-        {{ 0, 400, 2000, 200 }, 1, GRAY, false, false  }, //bottom platf
+        {{ 0, pDH, pDW, pDH }, 0, DARKGRAY, false, false},
+        {{ 0, pDH*2, pDW, pDH }, 1, GRAY, false, false  }, //bottom platf
         //need rework - {{ GetScreenWidth()/2.0f - 200.0f, GetScreenHeight()/2.0f - 100.0f, 200, 200}, 0, BLACK, false, false }, //door
-        {{ 0, -500, 1000, 500}, 1, GRAY, false, false },
+        {{ 0, 0, pDW, pDH}, 1, GRAY, false, false },
 
 
         //main room
-        {{3000,0,2000,400},0,DARKGRAY,false, false}, //bg
-        {{3000,400,2000,400},1,GRAY,false, false}, //the floor 
-        {{3000,-300,2000,300},1,GRAY,false, false}, //roof
+        {{pDW*2,pDH,pDW,pDH},0,DARKGRAY,false, false}, //bg
+        {{pDW*2,pDH*2,pDW,pDH},1,GRAY,false, false}, //the floor 
+        {{pDW*2,0,pDW,pDH},1,GRAY,false, false}, //roof
 
 
         //switch room
-        {{7000,0,1000,700}, 0, BLUE, false, false},
-        {{7000,-300,1000,400}, 1, DARKGRAY, false, false},
-        {{7000,400,1000,400}, 1, DARKGRAY, false, false},
+        {{pDW*4,pDH,pDW,pDH}, 0, BLUE, false, false},
+        {{pDW*4,0,pDW,pDH}, 1, DARKGRAY, false, false},
+        {{pDW*4,pDH*2,pDW,pDH}, 1, DARKGRAY, false, false},
+        
+
+        //"top" room - add more height
+        {{pDW*6,pDH,pDW,pDH},0,DARKGRAY,false, false}, //bg
+        {{pDW*6,pDH*2,pDW,pDH},1,GRAY,false, false}, //the floor 
+        {{pDW*6,0,pDW,pDH},1,GRAY,false, false}, //roof
 
 
-        //like 3 more rooms to be init-ed
+        //"water" room - add more height
+        {{pDW*8,pDH,pDW,pDH},0,DARKGRAY,false, false}, //bg
+        {{pDW*8,pDH*2,pDW,pDH},1,GRAY,false, false}, //the floor 
+        {{pDW*8,0,pDW,pDH},1,GRAY,false, false}, //roof
+
+
+        //"bullet" room
+        {{pDW*10,pDH,pDW,pDH},0,DARKGRAY,false, false}, //bg
+        {{pDW*10,pDH*2,pDW,pDH},1,GRAY,false, false}, //the floor 
+        {{pDW*10,0,pDW,pDH},1,GRAY,false, false}, //roof
+
 
         //moving objects
-        {{ 650, 300, 100, 10 }, 1, GRAY, true, { 650 , 300 }, { 200, 0 }, 500, 1, false },
+        {{ pDW/2, pDH+128-32, pDW/10, pDH/10 }, 1, GRAY, true, { pDW/2, pDH+128-32 }, { pUS*2, 0 }, pUS*8, 1, false },
 
 
 
         //dangerous objects
-        {{1500, 300, 100, 100}, 0, GOLD, false, true},
+        {{pDW*2+256, pDH+128, pUS, pUS}, 0, GOLD, false, true},
         
         
     
@@ -231,14 +253,15 @@ int main() {
 
         //Room-transition (maybe rework)
         //from tracking eyes room to main room and vice versa
-        if (player.position.x > 1950 && player.position.x < 2000 ) {
-            player.position.x = 3100;
-            player.safepos.x = 3100;
+        if (player.position.x > pDW-pUS && player.position.x < pDW ) {
+            player.position.x = pDW*2+pUS*2;
+            player.safepos.x = pDW*2+pUS*2;
         }
-        if (player.position.x > 3000 && player.position.x < 3050) {
-            player.position.x = 1900;
-            player.safepos.x = 1900;
+        if (player.position.x > pDW*2 && player.position.x < pDW*2+pUS) {
+            player.position.x = pDW-pUS*2;
+            player.safepos.x = pDW-pUS*2;
         }
+        /*
         //from main room to choosing room and vice versa
         if (player.position.x > 4950 && player.position.x < 5000) {
             player.position.x = 7100;
@@ -249,7 +272,7 @@ int main() {
             player.safepos.x = 4900;
         }
         //like 3 more transitions
-        
+        */
 
         //START OF DRAWING OF GAME 
         BeginDrawing();
@@ -284,7 +307,7 @@ int main() {
                 
 
                 //DEATH - tp to safepos when collision with [exact object] (prob need a rework to connect to envItems struct, not hardcoded)
-                if (CheckCollisionRecs(playerRect, envItems[10].rect))
+                if (CheckCollisionRecs(playerRect, envItems[19].rect))
                 {
                     player.position = player.safepos;
                 }
