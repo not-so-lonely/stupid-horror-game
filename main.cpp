@@ -110,7 +110,7 @@ int main() {
     InitWindow(sW, sH, "example");
 
     //section for ALL the textures AND images
-    Image image = LoadImage("brickswide.png");
+    Image image = LoadImage("resources/brickswide.png");
     Texture2D wall = LoadTextureFromImage(image);
     UnloadImage(image);
 
