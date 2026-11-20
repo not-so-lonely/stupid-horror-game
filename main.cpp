@@ -10,6 +10,7 @@ typedef struct Player {
     Vector2 position;
     float speed;
     bool canJump;
+    Vector2 safepos;
 } Player;
 
 typedef struct EnvItem {
@@ -22,6 +23,7 @@ typedef struct EnvItem {
     Vector2 velocity;
     float moveRange;
     int moveDirection;
+    bool isDanger;
 } EnvItem;
 
 void UpdateMovingPlatforms(EnvItem *envItems, int count, float delta) {
@@ -50,6 +52,7 @@ void UpdateMovingPlatforms(EnvItem *envItems, int count, float delta) {
         }
     }
 }
+
 void UpdatePlayer(Player *player, EnvItem *envItems, int envItemsLength, float delta) {
     if (IsKeyDown(KEY_LEFT)) player->position.x -= PLAYER_HOR_SPD*delta;
     if (IsKeyDown(KEY_RIGHT)) player->position.x += PLAYER_HOR_SPD*delta;
@@ -60,6 +63,7 @@ void UpdatePlayer(Player *player, EnvItem *envItems, int envItemsLength, float d
     }
 
     bool hitObstacle = false;
+   
     for (int i = 0; i < envItemsLength; i++)
     {
         EnvItem *ei = envItems + i;
@@ -75,6 +79,7 @@ void UpdatePlayer(Player *player, EnvItem *envItems, int envItemsLength, float d
             p->y = ei->rect.y;
             break;
         }
+        
     }
 
     if (!hitObstacle)
@@ -84,6 +89,21 @@ void UpdatePlayer(Player *player, EnvItem *envItems, int envItemsLength, float d
         player->canJump = false;
     }
     else player->canJump = true;
+    /*
+    bool hitDanger = false;
+    for (int i = 0; i < envItemsLength; i++)
+    {
+        EnvItem *ei = envItems + i;
+        Vector2 *p = &(player->position);
+        if (ei->isDanger && ei->rect.x <= p->x && ei->rect.x + ei->rect.width >= p->x && ei->rect.y >= p->y)
+        {
+            hitDanger = true;
+            p->x -= 200;
+            p->y -= 50;
+            break;
+        }
+    }
+        */
 }
 
 //######################################################################
@@ -110,17 +130,26 @@ int main() {
     player.position = (Vector2){ 3500, 350 };
     player.speed = 0;
     player.canJump = false;
+    player.safepos = (Vector2){ player.position.x, 350};
     EnvItem envItems[] = {
         //watch room
-        {{ 0, 0, 1000, 400 }, 0, DARKGRAY, false},
-        {{ 0, 400, 2000, 200 }, 1, GRAY, false }, //bottom platf
-        {{ jgg.x, jgg.y, 100, 10 }, 1, GRAY, true, jgg, { 200, 0 }, 500, 1 },
-        {{ GetScreenWidth()/2.0f - 200.0f, GetScreenHeight()/2.0f - 100.0f, 200, 200}, 0, BLACK, false }, //door
-        {{ 0, -500, 1000, 500}, 1, GRAY, false },
+        {{ 0, 0, 1000, 400 }, 0, DARKGRAY, false, false},
+        {{ 0, 400, 2000, 200 }, 1, GRAY, false, false  }, //bottom platf
+        {{ jgg.x, jgg.y, 100, 10 }, 1, GRAY, true, jgg, { 200, 0 }, 500, 1, false },
+        {{ GetScreenWidth()/2.0f - 200.0f, GetScreenHeight()/2.0f - 100.0f, 200, 200}, 0, BLACK, false, false }, //door
+        {{ 0, -500, 1000, 500}, 1, GRAY, false, false },
         //main room
-        {{3000,0,1000,400},0,DARKGRAY,false},
-        {{3000,400,1000,400},1,GRAY,false},
-        {{3000,-300,1000,300},1,GRAY,false}
+        {{3000,0,2000,400},0,DARKGRAY,false, false},
+        {{3000,400,2000,400},1,GRAY,false, false},
+        {{3000,-300,2000,300},1,GRAY,false, false},
+        //danger
+        {{1500, 300, 100, 100}, 0, GOLD, false, true},
+        //switch room
+        {{7000,0,1000,700}, 0, BLUE, false, false},
+       {{7000,-300,1000,400}, 1, DARKGRAY, false, false},
+       {{7000,400,1000,400}, 1, DARKGRAY, false, false},
+        
+    
     };
     //envItems[2]
     int envItemsLength = sizeof(envItems)/sizeof(envItems[0]);
@@ -129,8 +158,7 @@ int main() {
     camera.target = (Vector2){ player.position.x + 20.0f, player.position.y + 20.0f };
     camera.offset = (Vector2){ GetRenderWidth()/2.0f, GetRenderHeight()/2.0f};
     camera.rotation = 0.0f;
-    camera.zoom = 0.5f;
-
+    camera.zoom = 1.0f;
 
     SetTargetFPS(60);
 
@@ -140,7 +168,6 @@ int main() {
         UpdatePlayer(&player, envItems, envItemsLength, deltaTime);
 
         camera.target = (Vector2){ player.position.x + 20.0f, player.position.y + 20.0f };
-
 
         irisLeftPosition = player.position;
         irisRightPosition = player.position;
@@ -175,7 +202,22 @@ int main() {
             irisRightPosition.y = scleraRightPosition.y + dyy;
         }
 
-
+        if (player.position.x > 1950 && player.position.x < 2000 ) {
+            player.position.x = 3100;
+            player.safepos.x = 3100;
+        }
+        if (player.position.x > 3000 && player.position.x < 3050) {
+            player.position.x = 1900;
+            player.safepos.x = 1900;
+        }
+        if (player.position.x > 4950 && player.position.x < 5000) {
+            player.position.x = 7100;
+            player.safepos.x = 7100;
+        }
+        if (player.position.x > 7000 && player.position.x < 7100) {
+            player.position.x = 4900;
+            player.safepos.x = 4900;
+        }
 
         BeginDrawing();
 
@@ -203,6 +245,11 @@ int main() {
 
                 DrawCircleV(player.position, 5.0f, GOLD);
 
+                if (CheckCollisionRecs(playerRect, envItems[8].rect))
+                {
+                    DrawText("SEX",1300, 200,36,BLACK);
+                    player.position = player.safepos;
+                }
             EndMode2D();
 
 

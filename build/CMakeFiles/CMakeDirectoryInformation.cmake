@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/gnoevichok/Documents/code/game_sdl")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/gnoevichok/Documents/code/game_sdl/build4")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/gnoevichok/Documents/code/game_sdl/build3")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

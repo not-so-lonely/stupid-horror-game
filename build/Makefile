@@ -63,7 +63,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/gnoevichok/Documents/code/game_sdl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gnoevichok/Documents/code/game_sdl/build4
+CMAKE_BINARY_DIR = /home/gnoevichok/Documents/code/game_sdl/build3
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -90,9 +90,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gnoevichok/Documents/code/game_sdl/build4/CMakeFiles /home/gnoevichok/Documents/code/game_sdl/build4//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gnoevichok/Documents/code/game_sdl/build3/CMakeFiles /home/gnoevichok/Documents/code/game_sdl/build3//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gnoevichok/Documents/code/game_sdl/build4/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gnoevichok/Documents/code/game_sdl/build3/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
