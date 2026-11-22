@@ -104,8 +104,8 @@ void UpdatePlayer(Player *player, EnvItem *envItems, int envItemsLength, float d
 //main
 int main() {
     //initialazing windows W and H and window itself
-    const int sW = 800;
-    const int sH = 600;
+    const int sW = 960;
+    const int sH = 720;
 
     InitWindow(sW, sH, "example");
 
@@ -113,6 +113,9 @@ int main() {
     Image image = LoadImage("resources/brickswide.png");
     Texture2D wall = LoadTextureFromImage(image);
     UnloadImage(image);
+    Image bgim = LoadImage("resources/bg.png");
+    Texture2D bagr = LoadTextureFromImage(bgim);
+    UnloadImage(bgim);
 
 
     //all the parametres section
@@ -123,11 +126,11 @@ int main() {
     //moving eyes init from the ending room !!DONT TOUCH!!
     Vector2 scleraLeftPosition = { GetScreenWidth()/2.0f - 300.0f, GetScreenHeight()/2.0f - 100.0f };
     Vector2 scleraRightPosition = { GetScreenWidth()/2.0f + 100.0f, GetScreenHeight()/2.0f - 100.0f };
-    float scleraRadius = 80;
+    float scleraRadius = 92;
 
     Vector2 irisLeftPosition = { GetScreenWidth()/2.0f - 100.0f, GetScreenHeight()/2.0f - 100.0f };
     Vector2 irisRightPosition = { GetScreenWidth()/2.0f + 100.0f, GetScreenHeight()/2.0f - 100.0f };
-    float irisRadius = 24;
+    float irisRadius = 48;
     float angle = 0.0f;
     float dx = 0.0f, dy = 0.0f, dxx = 0.0f, dyy = 0.0f;
     //*probably need to be fixed+hardcoded for not to go to random coords +maybe some textures
@@ -142,41 +145,57 @@ int main() {
     //TODO: Scale all platform widths and heights to 64*n to apply textures accurately
     EnvItem envItems[] = {
         //ending room
-        {{ 0, pDH, pDW, pDH }, 0, DARKGRAY, false, false},
+        {{ 0, 0, pDW, pDH*2 }, 0, DARKGRAY, false, false}, //bg
         {{ 0, pDH*2, pDW, pDH }, 1, GRAY, false, false  }, //bottom platf
-        //need rework - {{ GetScreenWidth()/2.0f - 200.0f, GetScreenHeight()/2.0f - 100.0f, 200, 200}, 0, BLACK, false, false }, //door
-        {{ 0, 0, pDW, pDH}, 1, GRAY, false, false },
+        {{ 0, -pDH, pDW, pDH}, 1, GRAY, false, false }, //roof
+        {{ -pDH, -pDH, pDH, pDW}, 1, GRAY, false, false }, //left wall
+        {{ pDW, -pDH, pDH, pDW}, 1, GRAY, false, false }, //right wall
 
 
         //main room
-        {{pDW*2,pDH,pDW,pDH},0,DARKGRAY,false, false}, //bg
+        {{pDW*2,0,pDW,pDH*2},0,DARKGRAY,false, false}, //bg
         {{pDW*2,pDH*2,pDW,pDH},1,GRAY,false, false}, //the floor 
-        {{pDW*2,0,pDW,pDH},1,GRAY,false, false}, //roof
-
+        {{pDW*2,-pDH,pDW,pDH},1,GRAY,false, false}, //roof
+        {{ pDW*2-pDH, -pDH, pDH, pDW}, 1, GRAY, false, false }, //left wall
+        {{ pDW*3, -pDH, pDH, pDW}, 1, GRAY, false, false }, //right wall
 
         //switch room
-        {{pDW*4,pDH,pDW,pDH}, 0, BLUE, false, false},
-        {{pDW*4,0,pDW,pDH}, 1, DARKGRAY, false, false},
-        {{pDW*4,pDH*2,pDW,pDH}, 1, DARKGRAY, false, false},
-        
+        {{pDW*4,0,pDW,pDH*2}, 0, BLUE, false, false}, //bg
+        {{pDW*4,-pDH,pDW,pDH}, 1, DARKGRAY, false, false}, //roof
+        {{pDW*4,pDH*2,pDW,pDH}, 1, DARKGRAY, false, false}, //floor
+        {{ pDW*4-pDH, -pDH, pDH, pDW}, 1, GRAY, false, false }, //left wall
+        {{ pDW*5, -pDH, pDH, pDW}, 1, GRAY, false, false }, //right wall
+
 
         //"top" room - add more height
-        {{pDW*6,pDH,pDW,pDH},0,DARKGRAY,false, false}, //bg
+        {{pDW*6,0,pDW,pDH*2},0,DARKGRAY,false, false}, //bg
         {{pDW*6,pDH*2,pDW,pDH},1,GRAY,false, false}, //the floor 
-        {{pDW*6,0,pDW,pDH},1,GRAY,false, false}, //roof
+        {{pDW*6,-pDH,pDW,pDH},1,GRAY,false, false}, //roof
+        {{ pDW*6-pDH, -pDH, pDH, pDW}, 1, GRAY, false, false }, //left wall
+        {{ pDW*7, -pDH, pDH, pDW}, 1, GRAY, false, false }, //right wall
 
 
         //"water" room - add more height
-        {{pDW*8,pDH,pDW,pDH},0,DARKGRAY,false, false}, //bg
+        {{pDW*8,0,pDW,pDH*2},0,DARKGRAY,false, false}, //bg
         {{pDW*8,pDH*2,pDW,pDH},1,GRAY,false, false}, //the floor 
-        {{pDW*8,0,pDW,pDH},1,GRAY,false, false}, //roof
+        {{pDW*8,-pDH,pDW,pDH},1,GRAY,false, false}, //roof
+        {{ pDW*8-pDH, -pDH, pDH, pDW}, 1, GRAY, false, false }, //left wall
+        {{ pDW*9, -pDH, pDH, pDW}, 1, GRAY, false, false }, //right wall
 
 
         //"bullet" room
-        {{pDW*10,pDH,pDW,pDH},0,DARKGRAY,false, false}, //bg
+        {{pDW*10,0,pDW,pDH*2},0,DARKGRAY,false, false}, //bg
         {{pDW*10,pDH*2,pDW,pDH},1,GRAY,false, false}, //the floor 
-        {{pDW*10,0,pDW,pDH},1,GRAY,false, false}, //roof
+        {{pDW*10,-pDH,pDW,pDH},1,GRAY,false, false}, //roof
+        {{ pDW*10-pDH, -pDH, pDH, pDW}, 1, GRAY, false, false }, //left wall
+        {{ pDW*12, -pDH, pDH, pDW}, 1, GRAY, false, false }, //right wall
+        {{pDW*11,0,pDW,pDH*2},0,DARKGRAY,false, false}, //bg
+        {{pDW*11,pDH*2,pDW,pDH},1,GRAY,false, false}, //the floor 
+        {{pDW*11,-pDH,pDW,pDH},1,GRAY,false, false}, //roof
 
+
+        //other
+        //need rework - {{ GetScreenWidth()/2.0f - 200.0f, GetScreenHeight()/2.0f - 100.0f, 200, 200}, 0, BLACK, false, false }, //door
 
         //moving objects
         {{ pDW/2, pDH+128-32, pDW/10, pDH/10 }, 1, GRAY, true, { pDW/2, pDH+128-32 }, { pUS*2, 0 }, pUS*8, 1, false },
@@ -197,7 +216,7 @@ int main() {
     camera.target = (Vector2){ player.position.x + 20.0f, player.position.y + 20.0f };
     camera.offset = (Vector2){ GetRenderWidth()/2.0f, GetRenderHeight()/2.0f};
     camera.rotation = 0.0f;
-    camera.zoom = 0.7f;
+    camera.zoom = 1.0f;
 
 
     //game target fps
@@ -213,7 +232,7 @@ int main() {
 
 
         //binding camera to player
-        camera.target = (Vector2){ player.position.x + 20.0f, player.position.y + 20.0f };
+        camera.target = (Vector2){ player.position.x + 20.0f, player.position.y - pUS*3+32 };
         
     
         //TRACKING EYES !!DONT TOUCH AT ALL!!
@@ -261,7 +280,6 @@ int main() {
             player.position.x = pDW-pUS*2;
             player.safepos.x = pDW-pUS*2;
         }
-        /*
         //from main room to choosing room and vice versa
         if (player.position.x > 4950 && player.position.x < 5000) {
             player.position.x = 7100;
@@ -272,7 +290,7 @@ int main() {
             player.safepos.x = 4900;
         }
         //like 3 more transitions
-        */
+        
 
         //START OF DRAWING OF GAME 
         BeginDrawing();
@@ -289,16 +307,34 @@ int main() {
                 //TRACKING EYES !!DONT TOUCH!!
                 DrawCircleV(scleraLeftPosition, scleraRadius, LIGHTGRAY);
                 DrawCircleV(irisLeftPosition, irisRadius, BROWN);
-                DrawCircleV(irisLeftPosition, 10, BLACK);
+                DrawCircleV(irisLeftPosition, 32, BLACK);
 
                 DrawCircleV(scleraRightPosition, scleraRadius, LIGHTGRAY);
                 DrawCircleV(irisRightPosition, irisRadius, DARKGREEN);
-                DrawCircleV(irisRightPosition, 10, BLACK);
+                DrawCircleV(irisRightPosition, 32, BLACK);
 
 
                 //Drawing all the textures
-                DrawTexturePro(wall, { 0.0f, 0.0f, (float)wall.width, (float)wall.height}, {envItems[4].rect.x, envItems[4].rect.y, envItems[4].rect.width, envItems[4].rect.height}, { 0.0f, 0.0f }, 0.0f, WHITE);
-  
+                for ( int k = 1; k < 15; k++) {
+                for (int i =0; i<4; i++) { 
+                    for (int j=0; j<4; j++){
+                            if (envItems[k].rect.height < 300) {
+                                DrawTexturePro(wall, { 0.0f, 0.0f, (float)wall.width, (float)wall.height}, {envItems[k].rect.x+i*pUS*4, envItems[k].rect.y+j*pUS, (float)wall.width, (float)wall.height}, { 0.0f, 0.0f }, 0.0f, WHITE);
+                            }
+                            if (envItems[k].rect.height < 600 && envItems[k].rect.height > 300) {
+                                if (j>1) {continue;}
+                                DrawTexturePro(bagr, { 0.0f, 0.0f, (float)bagr.width, (float)bagr.height}, {envItems[k].rect.x+i*pUS*4, envItems[k].rect.y+j*pUS*4, (float)bagr.width, (float)bagr.height}, { 0.0f, 0.0f }, 0.0f, WHITE);
+                            }
+                            if (envItems[k].rect.height > 600) {
+                                for (int h=0; h < 16; h++) {
+                                    DrawTexturePro(wall, { 0.0f, 0.0f, (float)wall.width, (float)wall.height}, {envItems[k].rect.x, envItems[k].rect.y+h*pUS, (float)wall.width, (float)wall.height}, { 0.0f, 0.0f }, 0.0f, WHITE);
+                                }
+                            }
+                            //DrawTexturePro(wall, { 0.0f, 0.0f, (float)wall.width, (float)wall.height}, {envItems[2].rect.x+i*pUS*4, envItems[2].rect.y+j*pUS, (float)wall.width, (float)wall.height}, { 0.0f, 0.0f }, 0.0f, WHITE);
+                    }
+                }
+                }
+
 
                 //creating and drawing the player box (just to be visible, prob will need a texture)
                 Rectangle playerRect = { player.position.x - 20, player.position.y - 40, 40.0f, 40.0f };
@@ -307,7 +343,7 @@ int main() {
                 
 
                 //DEATH - tp to safepos when collision with [exact object] (prob need a rework to connect to envItems struct, not hardcoded)
-                if (CheckCollisionRecs(playerRect, envItems[19].rect))
+                if (CheckCollisionRecs(playerRect, envItems[31].rect))
                 {
                     player.position = player.safepos;
                 }
