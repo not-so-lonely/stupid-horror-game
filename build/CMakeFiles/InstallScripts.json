@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/korn/oslabgit/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
