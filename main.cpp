@@ -1,6 +1,7 @@
 #include "platformer.h"
 #include "raylib.h"
 #include "raymath.h"
+#include "assets.h"
 
 int main() {
     //initialazing windows W and H and window itself
@@ -8,11 +9,6 @@ int main() {
     const int sH = 600;
 
     InitWindow(sW, sH, "example");
-
-    //section for ALL the textures AND images
-    Image image = LoadImage("resources/brickswide.png");
-    Texture2D wall = LoadTextureFromImage(image);
-    UnloadImage(image);
 
 
     //all the parametres section
@@ -42,6 +38,11 @@ int main() {
     player.isDead = false;
     player.standingOn = -1;
     TimeState time = { 1.0f, 1.0f, 0.0 };
+
+
+    //ASSET MANAGER (TEXTURES, SOUNDS ETC)
+    AssetManager assets = { 0 };
+    int wallId  = AssetLoad(&assets, "resources/brickswide.png");
     
     //TODO: Scale all platform widths and heights to 64*n to apply textures accurately
     EnvItem envItems[] = {
@@ -95,6 +96,8 @@ int main() {
     };
     int envItemsLength = sizeof(envItems)/sizeof(envItems[0]);
 
+    //LOADING TEXTURES
+    envItems[4].texture  = AssetGet(&assets, wallId);
 
     //CAMERA - !!DONT TOUCH!!
     Camera2D camera = { 0 };
@@ -197,9 +200,19 @@ int main() {
             //starting camera
             BeginMode2D(camera);
                 //drawing all the envItems platforms
-                for (int i = 0; i < envItemsLength; i++)
+                for (int i = 0; i < envItemsLength; i++){
+                    EnvItem *e = &envItems[i];
+                    if (e->texture) {
+                        Rectangle src = { 0.0f, 0.0f,
+                                        (float)e->texture->width,
+                                        (float)e->texture->height };
+                        DrawTexturePro(*e->texture, src, e->rect,
+                                      (Vector2){ 0.0f, 0.0f }, 0.0f, WHITE);
+                    } else {
+                        DrawRectangleRec(e->rect, e->color);
+                    }
                 DrawRectangleRec(envItems[i].rect, envItems[i].color);                                           
-                
+                }
                 //TRACKING EYES !!DONT TOUCH!!
                 DrawCircleV(scleraLeftPosition, scleraRadius, LIGHTGRAY);
                 DrawCircleV(irisLeftPosition, irisRadius, BROWN);
@@ -208,10 +221,6 @@ int main() {
                 DrawCircleV(scleraRightPosition, scleraRadius, LIGHTGRAY);
                 DrawCircleV(irisRightPosition, irisRadius, DARKGREEN);
                 DrawCircleV(irisRightPosition, 10, BLACK);
-
-
-                //Drawing all the textures
-                DrawTexturePro(wall, { 0.0f, 0.0f, (float)wall.width, (float)wall.height}, {envItems[4].rect.x, envItems[4].rect.y, envItems[4].rect.width, envItems[4].rect.height}, { 0.0f, 0.0f }, 0.0f, WHITE);
   
 
                 //creating and drawing the player box (just to be visible, prob will need a texture)
@@ -268,7 +277,7 @@ int main() {
 
 
     //necessary - UNLOAD ALL THE TEXTURES
-    UnloadTexture(wall);
+    AssetUnloadAll(&assets);
     //*probably can make an list of all textures as class like as envItems to just unload all
 
 

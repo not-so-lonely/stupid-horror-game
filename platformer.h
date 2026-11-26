@@ -4,7 +4,7 @@
 
 constexpr int kScreenWidth = 800;
 constexpr int kScreenHeight = 600;
-constexpr int kG = 1350;
+constexpr int kG = 800;
 constexpr float kPlayerJumpSpd = 500.0f;
 constexpr float kPlayerHorizontalSpd = 400.0f;
 constexpr float kPlayerWidth  = 40.0f;
@@ -40,6 +40,7 @@ typedef struct EnvItem {
     float moveRange;
     int moveDirection;
     bool isDanger;
+    Texture2D *texture;
 } EnvItem;
 
 void UpdateTimeScale(TimeState *t, float realDelta);

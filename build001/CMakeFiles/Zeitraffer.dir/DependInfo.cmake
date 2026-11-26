@@ -1,0 +1,26 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  )
+
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/korn/oslabgit/assets.cpp" "CMakeFiles/Zeitraffer.dir/assets.cpp.o" "gcc" "CMakeFiles/Zeitraffer.dir/assets.cpp.o.d"
+  "/home/korn/oslabgit/main.cpp" "CMakeFiles/Zeitraffer.dir/main.cpp.o" "gcc" "CMakeFiles/Zeitraffer.dir/main.cpp.o.d"
+  "/home/korn/oslabgit/platformer.cpp" "CMakeFiles/Zeitraffer.dir/platformer.cpp.o" "gcc" "CMakeFiles/Zeitraffer.dir/platformer.cpp.o.d"
+  "" "Zeitraffer" "gcc" "CMakeFiles/Zeitraffer.dir/link.d"
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

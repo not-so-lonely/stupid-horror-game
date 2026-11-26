@@ -7,6 +7,7 @@ find_package(raylib REQUIRED)
 # This creates your game executable
 add_executable(${PROJECT_NAME} main.cpp
 			       platformer.cpp
+                               assets.cpp
 )
 
 # This connects (links) raylib to your game
